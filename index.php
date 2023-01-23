@@ -7,7 +7,10 @@
         <meta name="author" content="" />
         <title>Heroic Features - Start Bootstrap Template</title>
         <!-- Favicon-->
-        <?php echo $cssFiles; ?>
+        <link rel="icon" type="image/x-icon" href="/resources/assets/favicon.ico"/>
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+        <link href="/resources/templateFiles/css/styles.css" rel="stylesheet" />
     </head>
     <body>
         <!-- Responsive navbar-->

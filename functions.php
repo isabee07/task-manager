@@ -21,9 +21,5 @@ $jsFiles = '
         <script src="/resources/templateFiles/js/scripts.js"></script>
 '; 
 
-$cssFiles = ' 
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
-        <link href="/resources/templateFiles/css/styles.css" rel="stylesheet" />
-'; 
+
 ?>
