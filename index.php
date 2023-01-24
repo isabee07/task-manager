@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -33,15 +34,11 @@
             <div class="container px-lg-5">
                 <div class="p-4 p-lg-5 bg-light rounded-3 ">
                     <div class="m-4 m-lg-5">
-                        <h1 class="display-5 fw-bold">A warm welcome!</h1>
+                        <h1 class="display-5 fw-bold">Input Task!</h1>
                        <form class="row g-3">
-  <div class="col-md-6">
+  <div class="col-md-12">
     <label for="inputtitle" class="form-label">Title</label>
-    <input type="email" class="form-control" id="inputtitle">
-  </div>
-  <div class="col-md-6">
-    <label for="inputPassword4" class="form-label">Password</label>
-    <input type="password" class="form-control" id="inputPassword4">
+    <input type="email" class="form-control" id="inputtitle" placeholder="Address">
   </div>
   <div class="col-12">
     <label for="inputAddress" class="form-label">Description</label>
@@ -52,8 +49,12 @@
     <input type="text" class="form-control" id="inputAddress" placeholder="Address">
   </div>
   <div class="col-md-6">
-    <label for="inputCity" class="form-label">Time Needed</label>
-    <input type="text" class="form-control" id="inputTimeNeeded">
+    <label for="inputstartdate" class="form-label">Start Date</label>
+    <input type="text" class="form-control" id="inputstartdate" placeholder="Start Date">
+  </div>
+   <div class="col-md-6">
+    <label for="inputDuedate" class="form-label">Due Date</label>
+    <input type="text" class="form-control" id="inputDuedate" placeholder="Due Date">
   </div>
   <div class="col-md-4">
     <label for="inputtype" class="form-label">Type of task</label>
@@ -63,11 +64,13 @@
       <option>Homework</option>
       <option>Event</option>
       <option>Project</option>
+      <option>Trip</option>
+      <option>Appointment</option>
     </select>
   </div>
   <div class="col-md-2">
     <label for="inputreward" class="form-label">Reward</label>
-    <input type="text" class="form-control" id="inputreward">
+    <input type="text" class="form-control" id="inputreward" placeholder="Reward">
   </div>
   <div class="col-12">
     <div class="form-check">
