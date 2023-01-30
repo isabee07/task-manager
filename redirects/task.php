@@ -1,4 +1,8 @@
 <?php $_SERVER["DOCUMENT_ROOT"] . "/functions.php"; 
+if(isset($_POST['BTN_create']) && $_POST['user'] > 0) { 
+
+$date = date_create($_POST['dateDeadline']);
+$reformatDeadline = date_format($date, "Y/m/d"); 
 
 
 $largest_uid = 0; 
