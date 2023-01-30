@@ -22,13 +22,13 @@ $newFormData = array(
   "title"=>$_POST['title'],
   "description"=>$_POST['description'],
   "reward"=>$_POST['reward'],
-  "typeTask"
+  "typeTask"=>
   
 ); 
 
-array_push(); 
-$jsonData = json_encode(); 
-file_put_contents(); 
+array_push($pastFormData, $newFormData); 
+$jsonData = json_encode($pastFormData); 
+file_put_contents($_SERVER['DOCUMENT_ROOT'].'/data/users.json'); 
 
-
+header('Location: /index.php'); 
 ?>
