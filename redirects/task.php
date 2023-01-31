@@ -22,15 +22,14 @@ $newFormData = array(
   "address"=>$_POST['inputAddress']  
 ); 
 
-$jsonFormData = file_get_contents($_SERVER['DOCUMENT_ROOT'].'/data/users.json');
-
-echo "<pre>";
-var_dump($jsonFormData);
-echo "</pre>";
   
 array_push($pastFormData, $newFormData); 
-$jsonData = json_encode($pastFormData); 
-file_put_contents($_SERVER['DOCUMENT_ROOT'].'/data/users.json'); 
+$jsonData = json_encode($pastFormData, JSON_PRETTY_PRINT); 
+file_put_contents($pastFormData, $jsonData); 
 
+  echo '<pre>';
+  var_dump($jsonData); 
+  echo '</pre>';
+  
 header('Location: /index.php'); 
 ?>
