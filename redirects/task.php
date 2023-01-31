@@ -1,10 +1,6 @@
 <?php $_SERVER["DOCUMENT_ROOT"] . "/functions.php"; 
 if(isset($_POST['BTN_create']) && $_POST['user'] > 0) { 
 
-$date = date_create($_POST['dateDeadline']);
-$reformatDeadline = date_format($date, "Y/m/d"); 
-
-
 $largest_uid = 0; 
 foreach($tasksData as $item) {
   if ($item['uid'] > $largest_uid) {
@@ -18,12 +14,12 @@ $newFormData = array(
   "userUID"=>$_POST['user'],
   "dateCreate"=>date(Y/m/d),
   "dateComplete"=>NULL,
-  "dateDeadline"
-  "title"=>$_POST['title'],
+  "dateDeadline"=>$_POST['inputDuedate']
+  "title"=>$_POST['inputtitle'],
   "description"=>$_POST['description'],
-  "reward"=>$_POST['reward'],
-  "typeTask"=>
-  
+  "reward"=>$_POST['inputreward'],
+  "typeTask"=>$_POST['inputtype'], 
+  "address"=>$_POST['inputAddress']  
 ); 
 
 array_push($pastFormData, $newFormData); 
