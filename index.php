@@ -35,7 +35,11 @@
                     <div class="m-4 m-lg-5">
                         <h1 class="display-5 fw-bold">Input Task</h1>
                        <form class="row g-3">
-  <div class="col-md-12">
+  <div class="col-md-6">
+    <label for="inputuser" class="form-label">User</label>
+    <input type="text" class="form-control" id="inputuser" placeholder="User">
+  </div>
+  <div class="col-md-6">
     <label for="inputtitle" class="form-label">Title</label>
     <input type="text" class="form-control" id="inputtitle" placeholder="Title">
   </div>
