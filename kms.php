@@ -1,5 +1,4 @@
-// if(isset($_POST['BTN_create']) > 0) { 
-//     if(isset($_POST['BTN_create']) > 0) { 
+// if(isset($_POST['BTN_create']) > 0 && $_POST['user'] > 0) { 
 //   $date = date_create()
 //     $deadlineReformatted = 
 // $largest_uid = 0; 
