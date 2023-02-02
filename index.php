@@ -1,4 +1,3 @@
-<?php $_SERVER["DOCUMENT_ROOT"] . "/functions.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -36,7 +35,12 @@
                     <div class="m-4 m-lg-5">
                         <h1 class="display-5 fw-bold">Input Task</h1>
                        <form class="row g-3">
-  <div class="col-md-12">
+  <div class="col-md-6">
+    <label for="inputuser" class="form-label">User</label>
+  <select id="user" class="form-select" name="user">
+    <option value="0" selected>Choose One <span style="font-size: 10px"></span>
+  </div>
+  <div class="col-md-6">
     <label for="inputtitle" class="form-label">Title</label>
     <input type="text" class="form-control" id="inputtitle" placeholder="Title">
   </div>
@@ -161,3 +165,4 @@
         <script src="/resources/templateFiles/js/scripts.js"></script>
     </body>
 </html>
+
