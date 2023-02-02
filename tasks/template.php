@@ -6,7 +6,11 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Heroic Features - Start Bootstrap Template</title>
-    <?php echo $cssFiles;?>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap icons--> <?php echo $cssFiles; ?>
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="/resources/templateFiles/css/styles.css" rel="stylesheet" />
     </head>
     <body>
         <!-- Responsive navbar-->
@@ -88,7 +92,6 @@
         <!-- Footer-->
         <footer class="py-5 bg-dark">
             <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2022</p></div>
-        </footer> 
-<?php echo $jsFiles; ?>
+        </footer> <?php echo $jsFiles; ?>
     </body>
 </html>
