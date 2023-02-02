@@ -1,3 +1,4 @@
+<?php include $_SERVER['DOCUMENT_ROOT'].'/functions.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -6,12 +7,13 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Heroic Features - Start Bootstrap Template</title>
-        <!-- Favicon-->
+         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Bootstrap icons-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Bootstrap icons--> 
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="/resources/templateFiles/css/styles.css" rel="stylesheet" />
+    <?php
+echo $cssFiles;
+?>
     </head>
     <body>
         <!-- Responsive navbar-->
@@ -35,12 +37,7 @@
                     <div class="m-4 m-lg-5">
                         <h1 class="display-5 fw-bold">Input Task</h1>
                        <form class="row g-3">
-  <div class="col-md-6">
-    <label for="inputuser" class="form-label">User</label>
-  <select id="user" class="form-select" name="user">
-    <option value="0" selected>Choose One <span style="font-size: 10px"></span>
-  </div>
-  <div class="col-md-6">
+  <div class="col-md-12">
     <label for="inputtitle" class="form-label">Title</label>
     <input type="text" class="form-control" id="inputtitle" placeholder="Title">
   </div>
@@ -165,4 +162,3 @@
         <script src="/resources/templateFiles/js/scripts.js"></script>
     </body>
 </html>
-
