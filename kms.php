@@ -1,4 +1,5 @@
-// if(isset($_POST['BTN_create']) > 0 && $_POST['user'] > 0) { 
+// if(isset($_POST['BTN_create']) > 0) { 
+//     if(isset($_POST['BTN_create']) > 0) { 
 //   $date = date_create()
 //     $deadlineReformatted = 
 // $largest_uid = 0; 
@@ -28,16 +29,3 @@
 // file_put_contents($pastFormData, $jsonData); 
   
 // header('Location: /index.php'); 
-
-
-
-
-
-  
-  
-  
-<!-- 
-    // foreach($usersData as $user){
-    //  echo '<option value "'.$user['uid'].'">'.$user['fName']''.$user['lName'].'</option>';
-    // }
-    // ?> -->
