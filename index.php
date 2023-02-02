@@ -38,7 +38,8 @@
                        <form class="row g-3">
   <div class="col-md-6">
     <label for="inputuser" class="form-label">User</label>
-    <input type="text" class="form-control" id="inputuser" placeholder="User">
+  <select id="user" class="form-select" name="user">
+    <option value="0" selected>Choose One <span style="font-size: 10px"></span>
   </div>
   <div class="col-md-6">
     <label for="inputtitle" class="form-label">Title</label>
