@@ -17,19 +17,7 @@ echo $cssFiles;
     </head>
     <body>
         <!-- Responsive navbar-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container px-lg-5">
-                <a class="navbar-brand" href="#!">Start Bootstrap</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">Tasks</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+       <?php echo $navFiles; ?>
         <!-- Header-->
         <header class="py-5">
             <div class="container px-lg-5">
@@ -46,7 +34,7 @@ echo $cssFiles;
     <input type="text" class="form-control" id="inputTitle" placeholder="Title">
   </div>
   <div class="col-12">
-    <label for="inputAddress" class="form-label">Description</label>
+    <label for="description" class="form-label">Description</label>
     <input type="text" class="form-control" id="description" placeholder="Description">
   </div>
   <div class="col-12">

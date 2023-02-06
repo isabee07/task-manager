@@ -10,7 +10,6 @@
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Bootstrap icons--> <?php echo $cssFiles; ?>
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="/resources/templateFiles/css/styles.css" rel="stylesheet" />
     </head>
     <body>
         <!-- Responsive navbar-->
