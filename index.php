@@ -38,12 +38,12 @@ echo $cssFiles;
                         <h1 class="display-5 fw-bold">Input Task</h1>
                        <form class="row g-3">
   <div class="col-md-6">
-    <label for="inputuser" class="form-label">User</label>
-    <input type="text" class="form-control" id="inputuser" placeholder="User">
+    <label for="inputUser" class="form-label">User</label>
+    <input type="text" class="form-control" id="inputUser" placeholder="User">
   </div>
   <div class="col-md-6">
-    <label for="inputtitle" class="form-label">Title</label>
-    <input type="text" class="form-control" id="inputtitle" placeholder="Title">
+    <label for="inputTitle" class="form-label">Title</label>
+    <input type="text" class="form-control" id="inputTitle" placeholder="Title">
   </div>
   <div class="col-12">
     <label for="inputAddress" class="form-label">Description</label>

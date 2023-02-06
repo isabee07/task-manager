@@ -1,1 +1,1 @@
-<?php $_SERVER["DOCUMENT_ROOT"] . "/functions.php"; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'].'/functions.php'; ?>
