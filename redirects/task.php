@@ -22,6 +22,6 @@
 
 echo '<pre>'; 
   var_dump($tasksData);
-  echo '</pre>'; 
+echo '</pre>'; 
 
 ?>
