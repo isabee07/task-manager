@@ -14,7 +14,8 @@ $usersDataFile =$_SERVER['DOCUMENT_ROOT']."/data/users.json";
   // echo '</pre>';
 
 
-$cssFiles = '<link href="/resources/templateFiles/css/styles.css" rel="stylesheet" />';
+$cssFiles = '<link href="/resources/templateFiles/css/styles.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />';
 
 $jsFiles = '<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
