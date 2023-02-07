@@ -2,8 +2,7 @@
 
 if(isset($_POST['BTN_create']) > 0) { 
   
-  $date = date_create()
-    $deadlineReformatted = 
+  $date = date_create();
 $largest_uid = 0; 
 foreach($tasksData as $item) {
   if ($item['uid'] > $largest_uid) {
@@ -17,16 +16,13 @@ $newFormData = array(
   "user"=>$_POST['inputUser'],
   "dateCreate"=>date(Y/m/d),
   "dateComplete"=>NULL,
-  "dateDeadline"=>$_POST['inputDuedate']
+  "dateDeadline"=>$_POST['inputDuedate'],
   "title"=>$_POST['inputTitle'],
   "description"=>$_POST['description'],
   "reward"=>$_POST['inputreward'],
   "typeTask"=>$_POST['inputtype'], 
   "address"=>$_POST['inputAddress']  
 ); 
-
-
-
 
 array_push($pastFormData, $newFormData); 
 $jsonData = json_encode($newFormData, JSON_PRETTY_PRINT); 
