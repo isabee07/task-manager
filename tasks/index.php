@@ -1,9 +1,5 @@
 <?php include $_SERVER['DOCUMENT_ROOT'].'/functions.php'; 
 
-
-
-
-
 $result = array();
 foreach ($tasksData as $task){
   foreach ($usersData as $user){
@@ -15,7 +11,6 @@ foreach ($tasksData as $task){
   echo '<pre>';
   var_dump($result); 
   echo '</pre>';
-
 
 ?>
 <html lang="en">
