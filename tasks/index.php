@@ -1,4 +1,23 @@
-<?php include $_SERVER['DOCUMENT_ROOT'].'/functions.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'].'/functions.php'; 
+
+
+
+
+
+$result = array();
+foreach ($tasksData as $task){
+  foreach ($usersData as $user){
+     if($item1["userUID"] == $item2["uid"]) {
+   $result[] = array_merge($task,$user);
+   } 
+  }
+}
+  echo '<pre>';
+  var_dump($result); 
+  echo '</pre>';
+
+
+?>
 <html lang="en">
     <head>
         <meta charset="utf-8" />
@@ -37,7 +56,7 @@
   <thead>
     <tr>
       <th scope="col">Due Date</th>
-      <th scope="col">User</th>
+      <th scope="col">Name</th>
       <th scope="col">Title</th>
       <th scope="col">Task-type</th>
       <th scope="col">Reward</th>
