@@ -8,13 +8,14 @@ $result = array();
 foreach ($tasksData as $task){
   foreach ($usersData as $user){
      if($item1["userUID"] == $item2["uid"]) {
-   $result[] = array_merge($task,$user);
+      unset($user["uid"]);
+      $result[] = array_merge($task,$user);
    } 
   }
 }
-  echo '<pre>';
-  var_dump($result); 
-  echo '</pre>';
+  // echo '<pre>';
+  // var_dump($result); 
+  // echo '</pre>';
 
 
 ?>
@@ -64,11 +65,11 @@ foreach ($tasksData as $task){
   </thead>
   <tbody>
 <?php 
-  foreach($tasksData as $key => $task){
+  foreach($result as $key => $task){
     echo'
         <tr>
           <th scope="row">1</th>
-          <td>'.$task['userUID'].'</td>
+          <td>'.$task['fName'].' '.$task['lName'].'</td>
           <td>'.$task['title'].'</td>
           <td>'.$task['categories'].'</td>
           <td>'.$task['reward'].'</td>
