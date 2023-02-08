@@ -68,7 +68,7 @@ foreach ($tasksData as $task){
   foreach($result as $key => $task){
     echo'
         <tr>
-          <th scope="row">1</th>
+          <th scope="row">'.$task['dateDeadline'].'</th>
           <td>'.$task['fName'].' '.$task['lName'].'</td>
           <td>'.$task['title'].'</td>
           <td>'.$task['categories'].'</td>
