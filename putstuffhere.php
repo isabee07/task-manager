@@ -29,3 +29,7 @@
 // file_put_contents($pastFormData, $jsonData); 
   
 // header('Location: /index.php'); 
+
+TO DO 
+1. throw every new data into json 
+2. redirect index => redirect and then BACK to index 

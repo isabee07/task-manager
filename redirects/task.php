@@ -1,9 +1,9 @@
-<?php include $_SERVER['DOCUMENT_ROOT'].'/functions.php'; 
+<?php include($_SERVER['DOCUMENT_ROOT'].'/functions.php'); 
 
 if(isset($_POST['BTN_create']) > 0) { 
   
-  $date = date_create()
-    $deadlineReformatted = 
+  $date = date_create(); 
+  
 $largest_uid = 0; 
 foreach($tasksData as $item) {
   if ($item['uid'] > $largest_uid) {
@@ -17,29 +17,18 @@ $newFormData = array(
   "user"=>$_POST['inputUser'],
   "dateCreate"=>date(Y/m/d),
   "dateComplete"=>NULL,
-  "dateDeadline"=>$_POST['inputDuedate']
+  "dateDeadline"=>$_POST['inputDuedate'],
   "title"=>$_POST['inputTitle'],
   "description"=>$_POST['description'],
   "reward"=>$_POST['inputreward'],
   "typeTask"=>$_POST['inputtype'], 
-  "address"=>$_POST['inputAddress']  
+  "address"=>$_POST['inputAddress']
 ); 
 
-
-
-
-array_push($pastFormData, $newFormData); 
+array_push($tasksData, $newFormData); 
+file_put_contents($tasksData, $jsonData); 
 $jsonData = json_encode($newFormData, JSON_PRETTY_PRINT); 
-file_put_contents($pastFormData, $jsonData); 
 
-
-
-// echo '<pre>'; 
-//   var_dump($newFormData);
-// echo '</pre>'; 
-
-
-
-header('Location: /index.php'); 
-  
+header('Location: /index.php');
+}
 ?>
