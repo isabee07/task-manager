@@ -1,24 +1,4 @@
-<?php include $_SERVER['DOCUMENT_ROOT'].'/functions.php'; 
-
-
-
-
-
-$result = array();
-foreach ($tasksData as $task){
-  foreach ($usersData as $user){
-     if($task["userUID"] == $user["uid"]) {
-      unset($user["uid"]);
-      $result[] = array_merge($task,$user);
-   } 
-  }
-}
-  // echo '<pre>';
-  // var_dump($result); 
-  // echo '</pre>';
-
-
-?>
+<?php include $_SERVER['DOCUMENT_ROOT'].'/functions.php'; ?>
 <html lang="en">
     <head>
         <meta charset="utf-8" />
@@ -51,13 +31,13 @@ foreach ($tasksData as $task){
                 <div class="p-4 p-lg-5 bg-light rounded-3 text-center">
                     <div class="m-4 m-lg-5">
                         <h1 class="display-5 fw-bold">A warm welcome!</h1>
-                        <p class="fs-4">Bootstrap utility classes are used to create this jumbotron since the old component has been removed from the framework.</p>
+                        <p class="fs-4">Bootstrap utility classes are used to create this jumbotron since the old component has been removed from the framework. Why create custom CSS when you can use utilities?</p>
 <!--       Table Start -->
 <table class="table table-striped table-hover">
   <thead>
     <tr>
       <th scope="col">Due Date</th>
-      <th scope="col">Name</th>
+      <th scope="col">User</th>
       <th scope="col">Title</th>
       <th scope="col">Task-type</th>
       <th scope="col">Reward</th>
@@ -65,11 +45,11 @@ foreach ($tasksData as $task){
   </thead>
   <tbody>
 <?php 
-  foreach($result as $key => $task){
+  foreach($tasksData as $key => $task){
     echo'
         <tr>
-          <th scope="row">'.$task['dateDeadline'].'</th>
-          <td>'.$task['fName'].' '.$task['lName'].'</td>
+          <th scope="row">1</th>
+          <td>'.$task['userUID'].'</td>
           <td>'.$task['title'].'</td>
           <td>'.$task['categories'].'</td>
           <td>'.$task['reward'].'</td>

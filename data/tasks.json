@@ -14,7 +14,7 @@
   }, 
   {
 	"uid": 2002,
-	"userUID": 102,
+	"userUID": 101,
 	"dateCreate": "2023-01-20",
 	"dateDeadline": "2023-01-30",
 	"dateComplete": "2023-02-01",
@@ -26,7 +26,7 @@
 	"categories": "project"
   },
    {
-	"uid": 2003,
+	"uid": 2002,
 	"userUID": 101,
 	"dateCreate": "2023-01-20",
 	"dateDeadline": "2023-01-30",
@@ -39,7 +39,20 @@
 	"categories": "project"
   },
   {
-	"uid": 2004,
+	"uid": 2001,
+	"userUID": 103,
+	"dateCreate": "2023-01-19",
+	"dateDeadline": "2023-01-25",
+	"dateComplete": "2023-01-22",
+	"title": "Build To Do Project",
+	"description": "You and a partner will develop a Phase One \"To-Do\" Task Management Application focusing on functionality over form. The app will use Bootstrap, HTML/CSS, JavaScript, PHP, and JSON. ",
+	"status": "created",
+	"reward": 1.5,
+	"timeNeeded": 120,
+	"categories": "home work"
+  }, 
+  {
+	"uid": 2001,
 	"userUID": 102,
 	"dateCreate": "2023-01-19",
 	"dateDeadline": "2023-01-25",
@@ -52,7 +65,7 @@
 	"categories": "home work"
   }, 
   {
-	"uid": 2005,
+	"uid": 2001,
 	"userUID": 101,
 	"dateCreate": "2023-01-19",
 	"dateDeadline": "2023-01-25",
