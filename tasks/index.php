@@ -7,7 +7,7 @@
 $result = array();
 foreach ($tasksData as $task){
   foreach ($usersData as $user){
-     if($item1["userUID"] == $item2["uid"]) {
+     if($task["userUID"] == $user["uid"]) {
       unset($user["uid"]);
       $result[] = array_merge($task,$user);
    } 
