@@ -33,9 +33,11 @@ $jsonData = json_encode($newFormData, JSON_PRETTY_PRINT);
 file_put_contents($pastFormData, $jsonData); 
 
 
-echo '<pre>'; 
-  var_dump($newFormData);
-echo '</pre>'; 
+
+// echo '<pre>'; 
+//   var_dump($newFormData);
+// echo '</pre>'; 
+
 
 
 header('Location: /index.php'); 
