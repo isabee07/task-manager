@@ -1,4 +1,4 @@
-<?php include $_SERVER['DOCUMENT_ROOT'].'/functions.php'; ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/functions.php'); ?>
 <html lang="en">
     <head>
         <meta charset="utf-8" />

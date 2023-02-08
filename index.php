@@ -1,4 +1,4 @@
-<?php include $_SERVER['DOCUMENT_ROOT'].'/functions.php'; ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/functions.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -24,7 +24,7 @@ echo $cssFiles;
                 <div class="p-4 p-lg-5 bg-light rounded-3 ">
                     <div class="m-4 m-lg-5">
                         <h1 class="display-5 fw-bold">Input Task</h1>
-                       <form class="row g-3">
+                       <form class="row g-3" action="/redirects/task.php" method="post">
   <div class="col-md-6">
     <label for="inputUser" class="form-label">User</label>
     <input type="text" class="form-control" id="inputUser" placeholder="User">
@@ -149,6 +149,8 @@ echo $cssFiles;
             <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2022</p></div>
         </footer>
         <!-- Bootstrap core JS-->
-   <?php echo $jsFiles; ?>
+   <?php echo $jsFiles;
+
+?>
     </body>
 </html>
