@@ -24,16 +24,14 @@ $newFormData = array(
   "address"=>$_POST['inputAddress']  
 ); 
 
-array_push($pastFormData, $newFormData); 
-$jsonData = json_encode($newFormData, JSON_PRETTY_PRINT); 
-file_put_contents($pastFormData, $jsonData); 
+$jsonFormData = file_get_contents($_SERVER['DOCUMENT_ROOT'].'/data/.json');
+$pastFormData = json_decode($jsonFormData, TRUE);
+array_push($pastFormData, $newFormData);
+$jsonData = json_encode($pastFormData);
 
-
-echo '<pre>'; 
-  var_dump($newFormData);
-echo '</pre>'; 
-
-
+file_put_contents($_SERVER['DOCUMENT_ROOT'].'/data/tasks.json', $jsonData);
+  
 header('Location: /index.php'); 
   
+}
 ?>
