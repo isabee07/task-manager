@@ -33,3 +33,20 @@
 TO DO 
 1. throw every new data into json 
 2. redirect index => redirect and then BACK to index 
+
+
+$taskDataFile = $_SERVER['DOCUMENT_ROOT']."/data/tasks.json";
+$usersDataFile = $_SERVER['DOCUMENT_ROOT']."/data/users.json";
+
+
+<!-- <div class="col-md-4">
+    <label for="inputtype" class="form-label">Type of task</label>
+    <select id="inputtype" class="form-select">
+      <option selected>Types of Tasks</option>
+      <option>Chore</option>
+      <option>Homework</option>
+      <option>Event</option>
+      <option>Project</option>
+       <option>Trip</option>
+       <option>Appointment</option>
+    </select> -->

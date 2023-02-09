@@ -1,7 +1,7 @@
 <?php session_start();
 
-$taskDataFile = $_SERVER['DOCUMENT_ROOT']."/data/tasks.json";
-$usersDataFile =$_SERVER['DOCUMENT_ROOT']."/data/users.json";
+  $taskDataFile = ($_SERVER['DOCUMENT_ROOT']."/data/tasks.json"); 
+  $usersDataFile = ($_SERVER['DOCUMENT_ROOT']."/data/users.json");
   // Get data from json file.
   $jsonTasks = file_get_contents($taskDataFile); 
   $jsonUsers = file_get_contents($usersDataFile); 
