@@ -12,6 +12,15 @@ foreach($tasksData as $item) {
   }
 }
 
+$_SESSION["form"]["inputUser"] = $_POST['inputUser'];
+ $_SESSION["form"]["inputDuedate"] = $_POST['inputDuedate'];
+ $_SESSION["form"]["inputTitle"] = $_POST['inputTitle'];
+ $_SESSION["form"]["description"] = $_POST['description'];
+ $_SESSION["form"]["inputreward"] = $_POST['inputreward'];
+ $_SESSION["form"]["inputtype"] = $_POST['inputtype'];  
+  $_SESSION["form"]["inputAddress"]= $_POST['inputAddress']; 
+
+
 $newFormData = array(
   "uid"=>$newUID,
   "user"=>$_POST['inputUser'],
