@@ -25,14 +25,14 @@ $newFormData = array(
 ); 
 
   echo "<pre>";
-var_dump($newFormData);
+var_dump($newFormDat);
 echo "</pre>";
 
 
-array_push($tasksData, $newFormData); 
-file_put_contents($); 
-$jsonData = json_encode($newFormData, JSON_PRETTY_PRINT); 
+// array_push($tasksData, $newFormData); 
+// file_put_contents($tasksData, $jsonData); 
+// $jsonData = json_encode($newFormData, JSON_PRETTY_PRINT); 
 
-header('Location: /index.php');
+// header('Location: /index.php');
 }
 ?>
