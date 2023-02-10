@@ -12,7 +12,7 @@ foreach ($usersData as $item) {
         $largest_uid = $item['userUID'];
         $newUID = $largest_uid+1;
     }
-}
+} 
 
 $newFormData = array(
   "uid"=>$newUID,
