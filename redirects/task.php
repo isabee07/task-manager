@@ -29,9 +29,9 @@ var_dump($newFormData);
 echo "</pre>";
 
 
-// array_push($tasksData, $newFormData); 
-// file_put_contents($tasksData, $jsonData); 
-// $jsonData = json_encode($newFormData, JSON_PRETTY_PRINT); 
+array_push($tasksData, $newFormData); 
+file_put_contents($tasksData, $jsonData); 
+$jsonData = json_encode($newFormData, JSON_PRETTY_PRINT); 
 
 // header('Location: /index.php');
 }
