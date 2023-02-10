@@ -5,14 +5,14 @@ if(isset($_POST['BTN_create']) > 0) {
 $date=date_create();
 $dateRedone = date_format($date,"Y/m/d");
 
-$largest_uid = 0; 
-foreach($tasksData as $item) {
-  if ($item['uid'] > $largest_uid) {
-    $largest_uid = $item['uid']; 
-    $newUID = $largest_uid+1;
-  }
-}
 
+$largest_uid = 2000;
+foreach ($usersData as $item) {
+    if ($item['userUID'] > $largest_uid) {
+        $largest_uid = $item['userUID'];
+        $newUID = $largest_uid+1;
+    }
+}
 
 $newFormData = array(
   "uid"=>$newUID,
@@ -24,15 +24,16 @@ $newFormData = array(
   "typeTask"=>$_POST['inputtype']
 ); 
 
-  echo "<pre>";
-var_dump($newFormData);
-echo "</pre>";
+//   echo "<pre>";
+// var_dump($newFormData);
+// echo "</pre>";
 
 
-array_push($tasksData, $newFormData); 
-file_put_contents($tasksData, $jsonData); 
+array_push($usersData, $newFormData); 
 $jsonData = json_encode($newFormData, JSON_PRETTY_PRINT); 
+file_put_contents($taskDataFile, $jsonData); 
 
-// header('Location: /index.php');
+
+header('Location: /index.php');
 }
 ?>
