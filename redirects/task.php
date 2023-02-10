@@ -25,7 +25,7 @@ $newFormData = array(
 ); 
 
   echo "<pre>";
-var_dump($newFormDat);
+var_dump($newFormData);
 echo "</pre>";
 
 
