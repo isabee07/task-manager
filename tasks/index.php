@@ -1,9 +1,5 @@
 <?php include($_SERVER['DOCUMENT_ROOT'].'/functions.php'); 
 
-
-
-
-
 $result = array();
 foreach ($tasksData as $task){
   foreach ($usersData as $user){
