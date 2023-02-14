@@ -1,9 +1,1 @@
-{
-    "uid": null,
-    "user": "jayden",
-    "dateCreate": "2023\/02\/10",
-    "dateStart": "742024",
-    "title": "the mvp",
-    "description": "this is debatable",
-    "typeTask": "Project"
-}
+{"uid":null,"user":"isa","dateCreate":null,"dateStart":"tomorrow","title":"trying this again","description":"random task description","typeTask":"Trip","0":{"uid":null,"user":"isa","dateCreate":null,"dateStart":"tomorrow","title":"trying this again","description":"random task description","typeTask":"Trip","0":{"uid":null,"user":"elsa","dateCreate":null,"dateStart":"today","title":"doing this AGAIN","description":"please work???","typeTask":"Event","0":null}}}
