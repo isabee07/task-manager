@@ -1,17 +1,32 @@
 <?php include($_SERVER['DOCUMENT_ROOT'].'/functions.php'); 
 
-// $result = array();
-// foreach ($tasksData as $task){
-//   foreach ($usersData as $user){
-//      if($task["userUID"] == $user["uid"]) {
-//       unset($user["uid"]);
-//       $result[] = array_merge($task,$user);
-//    } 
-//   }
-// }
-//   echo '<pre>';
-//   var_dump($result); 
-//   echo '</pre>';
+$result = array();
+foreach ($tasksData as $task){
+  foreach ($usersData as $user){
+     if($task["userUID"] == $user["uid"]) {
+      unset($user["uid"]);
+      $result[] = array_merge($task,$user);
+   } 
+  }
+}
+
+
+
+$typeTask = array();
+foreach ($result as $type) {
+    $result[] = $type['categories'];
+}
+$uniqueTypes = array_unique($typeTask);
+
+
+
+
+
+
+
+  echo '<pre>';
+  var_dump($result); 
+  echo '</pre>';
 
 
 ?>
@@ -37,7 +52,25 @@
                     <div class="m-4 m-lg-5">
                         <h1 class="display-5 fw-bold">Task Filter</h1>
                         <p class="fs-4">Form here</p>
-                        <a class="btn btn-primary btn-lg" href="#!">Filter</a>
+                     <form action="/redirects/search.php" method="post">
+                      <select class="form-select" aria-label="Default select example">
+                        <option selected>Open this select menu</option>
+                        <option value="1">Chore</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                     </select>
+                      
+
+
+
+
+
+
+
+                       
+                       <input class="btn btn-primary btn-lg" type="submit" value="Search"
+                         name="BTN_create">
+                     </form>
                     </div>
                 </div>
             </div>
