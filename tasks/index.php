@@ -24,9 +24,9 @@ $uniqueTypes = array_unique($typeTask);
 
 
 
-  echo '<pre>';
-  var_dump($typeTask); 
-  echo '</pre>';
+  // echo '<pre>';
+  // var_dump($typeTask); 
+  // echo '</pre>';
 
 
 ?>
