@@ -4,10 +4,10 @@ if(isset($_POST['BTN_create']) > 0) {
 
 
 
-// $largest_uid = 0; 
+// $largest_uid = 2000; 
 // foreach($tasksData as $item) {
-//   if ($item['uid'] > $largest_uid) {
-//     $largest_uid = $item['uid']; 
+//   if ($item["uid"] > $largest_uid) {
+//     $largest_uid = $item["uid"]; 
 //     $newUID = $largest_uid+1;
 //   }
 // }
@@ -20,7 +20,7 @@ $newFormData = array(
   "dateStart"=> $_POST['inputStartdate'],
   "title"=>$_POST['inputTitle'],
   "description"=>$_POST['description'],
-  "typeTask"=>$_POST['inputtype'],
+  "inputtype"=>$_POST['inputtype'],
   "reward"=>$_POST['inputReward']
 ); 
   
