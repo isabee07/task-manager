@@ -9,9 +9,9 @@
   $tasksData =  json_decode($jsonTasks, TRUE);   
   $usersData =  json_decode($jsonUsers, TRUE);   
 
-  echo '<pre>';
-  var_dump($tasksData); 
-  echo '</pre>';
+  // echo '<pre>';
+  // var_dump($tasksData); 
+  // echo '</pre>';
 
 
 $cssFiles = '<link href="/resources/templateFiles/css/styles.css" rel="stylesheet" />

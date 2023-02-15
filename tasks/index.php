@@ -14,7 +14,7 @@ foreach ($tasksData as $task){
 
 $typeTask = array();
 foreach ($result as $type) {
-    $result[] = $type['categories'];
+    $typeTask[] = $type['categories'];
 }
 $uniqueTypes = array_unique($typeTask);
 
@@ -25,7 +25,7 @@ $uniqueTypes = array_unique($typeTask);
 
 
   echo '<pre>';
-  var_dump($result); 
+  var_dump($typeTask); 
   echo '</pre>';
 
 
