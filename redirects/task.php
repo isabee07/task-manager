@@ -14,7 +14,7 @@ if(isset($_POST['BTN_create']) > 0) {
   
 
 $newFormData = array(
-  "uid"=>$newUID,
+  "uid"=>null,
   "user"=>$_POST['inputUser'],
   "dateCreate"=>null,
   "dateStart"=> $_POST['inputStartdate'],
