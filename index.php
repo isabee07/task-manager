@@ -28,6 +28,7 @@ echo $cssFiles;
   <div class="col-md-6">
     <label for="inputUser" class="form-label">User</label>
     <input type="text" class="form-control" id="inputUser" placeholder="User" name="inputUser">
+    
   </div>
   <div class="col-md-6">
     <label for="inputTitle" class="form-label">Title</label>
@@ -37,11 +38,11 @@ echo $cssFiles;
     <label for="description" class="form-label">Description</label>
     <input type="text" class="form-control" id="description" placeholder="Description" name="description">
   </div>
-  <div class="col-md-5">
+  <div class="col-md-6">
     <label for="inputStartdate" class="form-label">Start Date</label>
     <input type="text" class="form-control" id="inputStartdate" placeholder="Start Date" name="inputStartdate">
   </div>
-  <div class="col-md-5">
+  <div class="col-md-4">
     <label for="inputtype" class="form-label">Type of task</label>
     <select id="inputtype" class="form-select" name="inputtype">
       <option selected>Types of Tasks</option>
@@ -52,10 +53,6 @@ echo $cssFiles;
        <option>Trip</option>
        <option>Appointment</option>
     </select>
-  </div>
-    <div class="col-md-2">
-    <label for="inputReward" class="form-label">Reward</label>
-    <input type="text" class="form-control" id="inputReward" name="inputReward" placeholder="Reward">
   </div>
   <div class="col-12">
     <button type="submit" class="btn btn-primary" name="BTN_create">Submit</button>
