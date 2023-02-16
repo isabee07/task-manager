@@ -91,3 +91,14 @@ $usersDataFile = $_SERVER['DOCUMENT_ROOT']."/data/users.json";
 // header('Location: /index.php');
 // }
 // ?>
+
+<!-- 
+<option selected>Open this select menu</option>
+                        
+                        foreach ($uniqueTypes as $type) {
+                          echo '<option value="'.$type.'">'.$type.'</option>';
+                        }
+                      ?>
+                       
+                     </select>
+                       -->
