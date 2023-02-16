@@ -5,10 +5,11 @@ if(isset($_POST['BTN_create']) > 0) {
 
 
   $i=0;
-foreach($tasksData as $task){
-if($task['categories'] == $_POST['filterType'])  {
-  $_SESSION[$i] = $task;
-  $i++;
+  foreach($mergedData as $key => $task){
+    if($task['categories'] == $_POST['filterType'])  {
+     $_SESSION['searchResults'][$i] = [$task];
+     $i++;
+
   
   }  //END OF IF
 
@@ -17,9 +18,9 @@ if($task['categories'] == $_POST['filterType'])  {
 
 
   
-echo '<pre>';
-  var_dump($_SESSION); 
-echo '</pre>';
+// echo '<pre>';
+//   var_dump($_SESSION['searchResults']); 
+// echo '</pre>';
 } else {
 // ummmm error? dont work here
   }
