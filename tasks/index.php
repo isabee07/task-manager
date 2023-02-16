@@ -54,10 +54,12 @@ $uniqueTypes = array_unique($typeTask);
                         <p class="fs-4">Form here</p>
                      <form action="/redirects/search.php" method="post">
                       <select class="form-select" aria-label="Default select example">
-                        <option selected>Open this select menu</option>
-                        <option value="1">Chore</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+                            <?php
+                        foreach ($uniqueTypes as $type) {
+                          echo '<option value="'.$type.'">'.$type.'</option>';
+                        }
+                      ?>
+                       
                      </select>
                       
 
