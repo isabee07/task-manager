@@ -9,9 +9,24 @@
   $tasksData =  json_decode($jsonTasks, TRUE);   
   $usersData =  json_decode($jsonUsers, TRUE);   
 
-  // echo '<pre>';
-  // var_dump($tasksData); 
-  // echo '</pre>';
+
+
+$mergedData = array();
+foreach ($tasksData as $task){
+  foreach ($usersData as $user){
+     if($task["userUID"] == $user["uid"]) {
+      unset($user["uid"]);
+      $mergedData[] = array_merge($task,$user);
+   } 
+  }
+}
+
+
+
+
+// echo '<pre>';
+//   var_dump($mergedData); 
+// echo '</pre>';
 
 
 $cssFiles = '<link href="/resources/templateFiles/css/styles.css" rel="stylesheet" />

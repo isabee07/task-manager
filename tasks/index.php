@@ -1,19 +1,19 @@
 <?php include($_SERVER['DOCUMENT_ROOT'].'/functions.php'); 
 
-$result = array();
-foreach ($tasksData as $task){
-  foreach ($usersData as $user){
-     if($task["userUID"] == $user["uid"]) {
-      unset($user["uid"]);
-      $result[] = array_merge($task,$user);
-   } 
-  }
-}
+// $result = array();
+// foreach ($tasksData as $task){
+//   foreach ($usersData as $user){
+//      if($task["userUID"] == $user["uid"]) {
+//       unset($user["uid"]);
+//       $result[] = array_merge($task,$user);
+//    } 
+//   }
+// }
 
 
 
 $typeTask = array();
-foreach ($result as $type) {
+foreach ($mergedData as $type) {
     $typeTask[] = $type['categories'];
 }
 $uniqueTypes = array_unique($typeTask);
@@ -94,7 +94,7 @@ $uniqueTypes = array_unique($typeTask);
   </thead>
   <tbody>
 <?php 
-  foreach($result as $key => $task){
+  foreach($mergedData as $key => $task){
     echo'
         <tr>
           <th scope="row">'.$task['dateDeadline'].'</th>
