@@ -17,6 +17,7 @@ $newFormData = array(
   "dateCreate"=>null,
   "dateStart"=> $_POST['inputStartdate'],
   "title"=>$_POST['inputTitle'],
+  "reward"=>$_POST['inputReward'],
   "description"=>$_POST['description'],
   "typeTask"=>$_POST['inputtype']
 ); 
