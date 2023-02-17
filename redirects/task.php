@@ -11,23 +11,23 @@ foreach ($tasksData as $item) {
 }
   
 
-// $newFormData = array(
-//   "uid"=>$newUID,
-//   "user"=>$_POST['inputUser'],
-//   "dateCreate"=>null,
-//   "dateStart"=> $_POST['inputStartdate'],
-//   "title"=>$_POST['inputTitle'],
-//   "description"=>$_POST['description'],
-//   "typeTask"=>$_POST['inputtype']
-// ); 
+$newFormData = array(
+  "uid"=>$newUID,
+  "user"=>$_POST['inputUser'],
+  "dateCreate"=>null,
+  "dateStart"=> $_POST['inputStartdate'],
+  "title"=>$_POST['inputTitle'],
+  "description"=>$_POST['description'],
+  "typeTask"=>$_POST['inputtype']
+); 
   
-// $jsonTasks = file_get_contents($taskDataFile);
-// $tasksData = json_decode($jsonTasks, TRUE);
-// array_push($newFormData, $tasksData);
-// $jsonData = json_encode($newFormData);
-// file_put_contents($_SERVER['DOCUMENT_ROOT'].'/data/tasks.json', $jsonData);
+$jsonTasks = file_get_contents($taskDataFile);
+$tasksData = json_decode($jsonTasks, TRUE);
+array_push($newFormData, $tasksData);
+$jsonData = json_encode($newFormData);
+file_put_contents($_SERVER['DOCUMENT_ROOT'].'/data/tasks.json', $jsonData);
 
-// header("Location: /index.php");
+header("Location: /index.php");
   
 }
 ?>

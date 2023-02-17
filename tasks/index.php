@@ -1,16 +1,14 @@
 <?php include($_SERVER['DOCUMENT_ROOT'].'/functions.php'); 
 
-// $result = array();
-// foreach ($tasksData as $task){
-//   foreach ($usersData as $user){
-//      if($task["userUID"] == $user["uid"]) {
-//       unset($user["uid"]);
-//       $result[] = array_merge($task,$user);
-//    } 
-//   }
-// }
+if($_GET['Search'] == 'yes'){
+  $allowedTaskData = $_SESSION['searchResults'];
+} else{
+  $allowedTaskData = $mergedData;
+}
 
-
+// echo '<pre>';
+//  var_dump($_SESSION['searchResults']); 
+// echo '</pre>';
 
 $typeTask = array();
 foreach ($mergedData as $type) {
@@ -18,15 +16,6 @@ foreach ($mergedData as $type) {
 }
 $uniqueTypes = array_unique($typeTask);
 
-
-
-
-
-
-
-  // echo '<pre>';
-  // var_dump($typeTask); 
-  // echo '</pre>';
 
 
 ?>
@@ -53,7 +42,8 @@ $uniqueTypes = array_unique($typeTask);
                         <h1 class="display-5 fw-bold">Task Filter</h1>
                         <p class="fs-4">Form here</p>
                      <form action="/redirects/search.php" method="post">
-                      <select class="form-select" aria-label="Default select example">
+                      <select class="form-select" aria-label="Default select example" name='filterType' >
+                        <option selected>Open this select menu</option>
                             <?php
                         foreach ($uniqueTypes as $type) {
                           echo '<option value="'.$type.'">'.$type.'</option>';

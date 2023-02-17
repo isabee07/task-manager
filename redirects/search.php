@@ -4,11 +4,11 @@ if(isset($_POST['BTN_create']) > 0) {
 
 
 
-
   $i=0;
+  $_SESSION['searchResults'] = [];
   foreach($mergedData as $key => $task){
     if($task['categories'] == $_POST['filterType'])  {
-     $_SESSION['searchResults'][$i] = [$task];
+     $_SESSION['searchResults'][$i] = $task;
      $i++;
 
   
@@ -16,16 +16,16 @@ if(isset($_POST['BTN_create']) > 0) {
 
 } //END OF FOREACH
 
-
+header('Location: /tasks/index.php?search=Yes');
 
   
 // echo '<pre>';
 //   var_dump($_SESSION['searchResults']); 
 // echo '</pre>';
 
-echo "the button was pressed. <br>";
+
 
 } else {
-echo "The button was not pressed. <br>";
+
   }
 ?>
