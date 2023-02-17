@@ -4,6 +4,7 @@ if(isset($_POST['BTN_create']) > 0) {
 
 
 
+
   $i=0;
   foreach($mergedData as $key => $task){
     if($task['categories'] == $_POST['filterType'])  {
@@ -21,7 +22,10 @@ if(isset($_POST['BTN_create']) > 0) {
 // echo '<pre>';
 //   var_dump($_SESSION['searchResults']); 
 // echo '</pre>';
+
+echo "the button was pressed. <br>";
+
 } else {
-// ummmm error? dont work here
+echo "The button was not pressed. <br>";
   }
 ?>
