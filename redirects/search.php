@@ -11,17 +11,26 @@ if(isset($_POST['BTN_create']) > 0) {
      $_SESSION['searchResults'][$i] = $task;
      $i++;
 
+// if
+
+
+
+
+
+
+
+      
   
   }  //END OF IF
 
 } //END OF FOREACH
 
-header('Location: /tasks/index.php?search=Yes');
+// header('Location:/tasks/index.php?search=Yes');
 
   
-// echo '<pre>';
-//   var_dump($_SESSION['searchResults']); 
-// echo '</pre>';
+echo '<pre>';
+  var_dump($_SESSION['searchResults']); 
+echo '</pre>';
 
 
 
