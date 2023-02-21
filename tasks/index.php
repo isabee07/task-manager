@@ -1,14 +1,12 @@
 <?php include($_SERVER['DOCUMENT_ROOT'].'/functions.php'); 
 
-if($_GET['Search'] == 'yes'){
+if($_GET['search'] == 'Yes'){
   $allowedTaskData = $_SESSION['searchResults'];
 } else{
   $allowedTaskData = $mergedData;
 }
 
-// echo '<pre>';
-//  var_dump($_SESSION['searchResults']); 
-// echo '</pre>';
+
 
 $typeTask = array();
 foreach ($mergedData as $type) {
@@ -17,6 +15,12 @@ foreach ($mergedData as $type) {
 $uniqueTypes = array_unique($typeTask);
 
 
+
+
+
+// echo '<pre>';
+//  var_dump($Usersdata); 
+// echo '</pre>';
 
 ?>
 <html lang="en">
@@ -43,7 +47,7 @@ $uniqueTypes = array_unique($typeTask);
                         <p class="fs-4">Form here</p>
                      <form action="/redirects/search.php" method="post">
                       <select class="form-select" aria-label="Default select example" name='filterType' >
-                        <option selected>Open this select menu</option>
+                        <option selected>Choose the type of task</option>
                             <?php
                         foreach ($uniqueTypes as $type) {
                           echo '<option value="'.$type.'">'.$type.'</option>';
@@ -51,7 +55,16 @@ $uniqueTypes = array_unique($typeTask);
                       ?>
                        
                      </select>
-                      
+                      <br>
+                     <select class="form-select" aria-label="Default select example" name='filterUser' >
+                        <option selected>Choose the User</option>
+                            <?php
+                        foreach ($usersData as $user) {
+                          echo '<option value="'.$user['uid'].'">'.$user['fName'].'</option>';
+                        }
+                      ?>
+                       
+                     </select>
 
 
 

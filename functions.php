@@ -25,7 +25,7 @@ foreach ($tasksData as $task){
 
 
 // echo '<pre>';
-//   var_dump($mergedData); 
+// var_dump($uniqueTypes); 
 // echo '</pre>';
 
 
