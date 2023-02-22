@@ -47,7 +47,7 @@ $uniqueTypes = array_unique($typeTask);
                         <p class="fs-4">Form here</p>
                      <form action="/redirects/search.php" method="post">
                       <select class="form-select" aria-label="Default select example" name='filterType' >
-                        <option selected>Choose the type of task</option>
+                        <option value="none">Choose the type of task</option>
                             <?php
                         foreach ($uniqueTypes as $type) {
                           echo '<option value="'.$type.'">'.$type.'</option>';
