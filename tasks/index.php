@@ -14,14 +14,6 @@ foreach ($mergedData as $type) {
 }
 $uniqueTypes = array_unique($typeTask);
 
-
-
-
-
-// echo '<pre>';
-//  var_dump($Usersdata); 
-// echo '</pre>';
-
 ?>
 <html lang="en">
     <head>
@@ -45,9 +37,9 @@ $uniqueTypes = array_unique($typeTask);
                     <div class="m-4 m-lg-5">
                         <h1 class="display-5 fw-bold">Task Filter</h1>
                         <p class="fs-4">Form here</p>
-                     <form action="/redirects/search.php" method="post">
-                      <select class="form-select" aria-label="Default select example" name='filterType' >
-                        <option selected>Choose the type of task</option>
+                     <form method="post">
+                      <select class="form-select" aria-label="Default select example" value="none" name='filterType' >
+                        <option value="none">Choose the type of task</option>
                             <?php
                         foreach ($uniqueTypes as $type) {
                           echo '<option value="'.$type.'">'.$type.'</option>';
@@ -56,7 +48,7 @@ $uniqueTypes = array_unique($typeTask);
                        
                      </select>
                       <br>
-                     <select class="form-select" aria-label="Default select example" name='filterUser' >
+                     <select class="form-select" aria-label="Default select example" value="none" name='filterUser' >
                         <option selected>Choose the User</option>
                             <?php
                         foreach ($usersData as $user) {
