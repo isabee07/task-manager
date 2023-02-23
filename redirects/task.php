@@ -25,7 +25,7 @@ $newFormData = array(
 $jsonTasks = file_get_contents($taskDataFile);
 $tasksData = json_decode($jsonTasks, TRUE);
 array_push($newFormData, $tasksData);
-$jsonData = json_encode($newFormData);
+$jsonData = json_encode($newFormData JSON_PRETTY_PRINT);
 file_put_contents($_SERVER['DOCUMENT_ROOT'].'/data/tasks.json', $jsonData);
 
 header("Location: /index.php");
