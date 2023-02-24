@@ -4,6 +4,11 @@ foreach($tasksData as $task){
 $i++; 
 }
 
+$userCount = 0; 
+foreach ($usersData as $user){
+  $userCount++; 
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -82,20 +87,22 @@ echo $cssFiles;
                         <div class="card bg-light border-0 h-100">
                             <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
                                 <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-collection"></i></div>
-                                <h2 class="fs-4 fw-bold">Count Data</h2>
+                                <h2 class="fs-4 fw-bold">Count Tasks</h2>
                                 <p class="mb-0">Total tasks: <?php echo $i; ?></p>
                             </div>
                         </div>
 <!--                       end first card -->
                     </div>
                     <div class="col-lg-6 col-xxl-4 mb-5">
+<!--                       start second card -->
                         <div class="card bg-light border-0 h-100">
                             <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
                                 <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-cloud-download"></i></div>
-                                <h2 class="fs-4 fw-bold">Free to download</h2>
-                                <p class="mb-0">As always, Start Bootstrap has a powerful collection of free templates.</p>
+                                <h2 class="fs-4 fw-bold">Count Users</h2>
+                                <p class="mb-0">Total Users: <?php echo $userCount; ?></p>
                             </div>
                         </div>
+<!--                       end second card -->
                     </div>
                     <div class="col-lg-6 col-xxl-4 mb-5">
                         <div class="card bg-light border-0 h-100">
