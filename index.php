@@ -2,6 +2,7 @@
 $i = 0; 
 $catCount = 0; 
 $taskPastDue = 0;
+$taskFutureDue = 0; 
 foreach($tasksData as $task){
   if($task['categories'] == "project"){
     $catCount++;
@@ -17,6 +18,10 @@ foreach ($usersData as $user){
 if( strtotime($task['dateDeadline']) < strtotime(date('h:i:sa'))) {
 $taskPastDue++;
 }
+
+  if(strtotime($task['dateDeadline']) > strtotime(date('604800'))){
+    $taskFutureDue++; 
+  }
 
 
 ?>
@@ -126,6 +131,7 @@ echo $cssFiles;
 <!--                        end third card -->
                     </div>
                     <div class="col-lg-6 col-xxl-4 mb-5">
+<!--                       start fourth card -->
                         <div class="card bg-light border-0 h-100">
                             <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
                                 <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-bootstrap"></i></div>
@@ -134,15 +140,18 @@ echo $cssFiles;
                               
                             </div>
                         </div>
+<!--                       end fourth card -->
                     </div>
                     <div class="col-lg-6 col-xxl-4 mb-5">
+<!--                       start fifth card -->
                         <div class="card bg-light border-0 h-100">
                             <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
                                 <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-code"></i></div>
-                                <h2 class="fs-4 fw-bold">Simple clean code</h2>
-                                <p class="mb-0">We keep our dependencies up to date and squash bugs as they come!</p>
+                                <h2 class="fs-4 fw-bold">Tasks Due in 7 Days:</h2>
+                                <p class="mb-0">Tasks due in the next week: <?php echo $taskFutureDue;  ?> </p>
                             </div>
                         </div>
+<!--                       end fifth card -->
                     </div>
                     <div class="col-lg-6 col-xxl-4 mb-5">
                         <div class="card bg-light border-0 h-100">
