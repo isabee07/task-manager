@@ -23,7 +23,6 @@ $taskPastDue++;
     $taskFutureDue++; 
   }
 
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
