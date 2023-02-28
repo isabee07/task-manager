@@ -5,11 +5,13 @@ $taskPastDue = 0;
 $taskFutureDue = 0; 
 $rewardSum = 0;
 $timeSum = 0;
+$projectSum = 0;
 foreach($tasksData as $task){
 
 $rewardSum = $rewardSum + $task['reward'];
 $timeSum = $timeSum + $task['timeNeeded'];
   if($task['categories'] == "project"){
+   $projectSum = $projectSum + $task['reward'];
     $catCount++;
   } // end if 
 $i++; 
@@ -117,11 +119,48 @@ echo $cssFiles;
                         <div class="card bg-light border-0 h-100">
                             <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
                                 <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-cloud-download"></i></div>
+                                <h2 class="fs-4 fw-bold">Project Tasks Rewards</h2>
+                                <p class="mb-0">Sum of the Project Task Rewards <?php echo $projectSum; ?></p>
+                            </div>
+                        </div>
+<!--                       end second card -->
+                    </div>
+                  <div class="col-lg-6 col-xxl-4 mb-5">
+<!--                       start seventh card -->
+                        <div class="card bg-light border-0 h-100">
+                            <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-cloud-download"></i></div>
+                                <h2 class="fs-4 fw-bold">Task type</h2>
+                                <p class="mb-0">HomeWork:</p>
+                              <p class="mb-0">Chores:</p>
+                              <p class="mb-0">Social:</p>
+                              <p class="mb-0">Project:</p>
+                            </div>
+                        </div>
+<!--                       end seventh card -->
+                    </div>
+                  <div class="col-lg-6 col-xxl-4 mb-5">
+<!--                       start seventh card -->
+                        <div class="card bg-light border-0 h-100">
+                            <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-cloud-download"></i></div>
+                                <h2 class="fs-4 fw-bold">Task Status</h2>
+                                <p class="mb-0">Task Created:</p>
+                                <p class="mb-0">Task Completed:</p>
+                            </div>
+                        </div>
+<!--                       end seventh card -->
+                    </div>
+                  <div class="col-lg-6 col-xxl-4 mb-5">
+<!--                       start 8th card -->
+                        <div class="card bg-light border-0 h-100">
+                            <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-cloud-download"></i></div>
                                 <h2 class="fs-4 fw-bold">Count Users</h2>
                                 <p class="mb-0">Total Users: <?php echo $userCount; ?></p>
                             </div>
                         </div>
-<!--                       end second card -->
+<!--                       end 8th card -->
                     </div>
                     <div class="col-lg-6 col-xxl-4 mb-5">
 <!--                       start third card -->
@@ -135,7 +174,7 @@ echo $cssFiles;
 <!--                        end third card -->
                     </div>
                     <div class="col-lg-6 col-xxl-4 mb-5">
-<!--                       start fourth card -->
+<!--                       start 9th card -->
                         <div class="card bg-light border-0 h-100">
                             <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
                                 <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-bootstrap"></i></div>
@@ -144,7 +183,7 @@ echo $cssFiles;
                               
                             </div>
                         </div>
-<!--                       end fourth card -->
+<!--                       end 9th card -->
                     </div>
                     <div class="col-lg-6 col-xxl-4 mb-5">
 <!--                       start fifth card -->
@@ -169,6 +208,8 @@ echo $cssFiles;
                     </div>
                 </div>
             </div>
+            
+          
         </section>
         <!-- Footer-->
         <footer class="py-5 bg-dark">
