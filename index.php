@@ -21,8 +21,6 @@ $timeSum = $timeSum + $task['timeNeeded'];
    $projectSum = $projectSum + $task['reward'];
     $catCount++;
   } // end if 
-$i++; 
-} // end foreach
 
 $userCount = 0; 
 foreach ($usersData as $user){
@@ -58,6 +56,9 @@ if($task['categories'] == "social"){
   } elseif ($task['status'] == "completed") {
     $compCount++; 
   }
+
+  $i++; 
+} // end foreach
 ?>
 <!DOCTYPE html>
 <html lang="en">
