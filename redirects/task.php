@@ -14,18 +14,22 @@ foreach ($tasksData as $item) {
 $newFormData = array(
   "uid"=>$newUID,
   "user"=>$_POST['inputUser'],
-  "dateCreate"=>null,
-  "dateStart"=>$_POST['inputStartdate'],
+  "dateCreate"=>$_POST['inputStartdate'],
+  "dateDeadline"=>$_POST['dateDeadline'],
+  "dateComplete"=>null,
   "title"=>$_POST['inputTitle'],
-  "reward"=>$_POST['inputReward'],
   "description"=>$_POST['description'],
-  "typeTask"=>$_POST['inputtype']
+  "status"=>"created",
+  "reward"=>$_POST['inputReward'],
+  "timeNeeded"=>$_POST['timeNeeded'],
+  "categories"=>$POST['inputtype']
+  
 ); 
   
 $jsonTasks = file_get_contents($taskDataFile);
 $tasksData = json_decode($jsonTasks, TRUE);
 array_push($newFormData, $tasksData);
-$jsonData = json_encode($newFormData JSON_PRETTY_PRINT);
+$jsonData = json_encode($newFormData, JSON_PRETTY_PRINT);
 file_put_contents($_SERVER['DOCUMENT_ROOT'].'/data/tasks.json', $jsonData);
 
 header("Location: /index.php");

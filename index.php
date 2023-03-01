@@ -100,7 +100,15 @@ echo $cssFiles;
   </div>
   <div class="col-md-5">
     <label for="inputStartdate" class="form-label">Start Date</label>
-    <input type="text" class="form-control" id="inputStartdate" placeholder="Start Date" name="inputStartdate">
+    <input type="month" class="form-control" id="inputStartdate" placeholder="Start Date" name="inputStartdate">
+  </div>
+  <div class="col-md-5">
+    <label for="inputStartdate" class="form-label">End Date</label>
+    <input type="month" class="form-control" id="inputEnddate" placeholder="End Date" name="dateDeadline">
+  </div>
+  <div class="col-md-5">
+    <label for="inputStartdate" class="form-label">Time Needed</label>
+    <input type="number" class="form-control" id="inputtime" placeholder="Time needed" name="timeNeeded">
   </div>
   <div class="col-md-5">
     <label for="inputtype" class="form-label">Type of task</label>
@@ -116,7 +124,7 @@ echo $cssFiles;
   </div>
     <div class="col-md-2">
     <label for="inputReward" class="form-label">Reward</label>
-    <input type="text" class="form-control" id="inputReward" name="inputReward" placeholder="Reward">
+    <input type="number" class="form-control" id="inputReward" name="inputReward" placeholder="Reward">
   </div>
   <div class="col-12">
     <button type="submit" class="btn btn-primary" name="BTN_create">Submit</button>
