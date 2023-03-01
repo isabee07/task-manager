@@ -6,6 +6,11 @@ $taskFutureDue = 0;
 $rewardSum = 0;
 $timeSum = 0;
 $projectSum = 0;
+$hwCount = 0; 
+$socialCount = 0; 
+$choreCount = 0; 
+$projectCount = 0; 
+
 foreach($tasksData as $task){
 
 $rewardSum = $rewardSum + $task['reward'];
@@ -30,6 +35,21 @@ $taskPastDue++;
     $taskFutureDue++; 
   }
 
+if($task['categories'] == "project"){
+    $projectCount++;
+  } // end if 
+
+  if($task['categories'] == "chores"){
+    $choreCount++;
+  } // end if 
+
+    if($task['categories'] == "home work"){
+    $hwCount++;
+  } // end if 
+
+if($task['categories'] == "social"){
+    $socialCount++;
+  } // end if 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -131,10 +151,10 @@ echo $cssFiles;
                             <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
                                 <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-cloud-download"></i></div>
                                 <h2 class="fs-4 fw-bold">Task type</h2>
-                                <p class="mb-0">HomeWork:</p>
-                              <p class="mb-0">Chores:</p>
-                              <p class="mb-0">Social:</p>
-                              <p class="mb-0">Project:</p>
+                                <p class="mb-0">Homework: <?php echo $hwCount; ?></p>
+                              <p class="mb-0">Chores: <?php echo $choreCount; ?></p>
+                              <p class="mb-0">Social: <?php echo $socialCount; ?></p>
+                              <p class="mb-0">Project: <?php echo $projectCount; ?></p>
                             </div>
                         </div>
 <!--                       end seventh card -->
