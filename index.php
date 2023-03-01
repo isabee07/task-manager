@@ -10,6 +10,8 @@ $hwCount = 0;
 $socialCount = 0; 
 $choreCount = 0; 
 $projectCount = 0; 
+$compCount = 0; 
+$nonComp = 0; 
 
 foreach($tasksData as $task){
 
@@ -50,6 +52,12 @@ if($task['categories'] == "project"){
 if($task['categories'] == "social"){
     $socialCount++;
   } // end if 
+
+  if($task['status'] != "completed"){
+    $nonComp++;
+  } elseif ($task['status'] == "completed") {
+    $compCount++; 
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -165,8 +173,8 @@ echo $cssFiles;
                             <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
                                 <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-cloud-download"></i></div>
                                 <h2 class="fs-4 fw-bold">Task Status</h2>
-                                <p class="mb-0">Task Created:</p>
-                                <p class="mb-0">Task Completed:</p>
+                                <p class="mb-0">Task Created: <?php echo $nonComp; ?></p>
+                                <p class="mb-0">Task Completed: <?php echo $compCount; ?></p>
                             </div>
                         </div>
 <!--                       end seventh card -->
