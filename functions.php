@@ -9,7 +9,13 @@
   $tasksData =  json_decode($jsonTasks, TRUE);   
   $usersData =  json_decode($jsonUsers, TRUE);   
 
-
+// sort by amt function 
+function sortByReward($x, $y){
+  if ($x['reward'] == $y['reward']){
+    return 0; 
+  } // end if 
+  return ($x['reward'] < $y['reward']) ? 1:-1;
+} // end function 
 
 $mergedData = array();
 foreach ($tasksData as $task){

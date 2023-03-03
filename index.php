@@ -59,6 +59,22 @@ if($task['categories'] == "social"){
 
   $i++; 
 } // end foreach
+
+// sorting taskData 
+$sortedData = $tasksData; 
+usort($sortedData, 'sortByReward');
+$i = 0; 
+$top3Rewards = []; 
+while ($i <= 2){
+  $top3Rewards[$i] = $sortedData[$i]; 
+  $i++; 
+} // end while
+// finished sorting taskData
+
+
+
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -98,14 +114,30 @@ echo $cssFiles;
     <label for="description" class="form-label">Description</label>
     <input type="text" class="form-control" id="description" placeholder="Description" name="description">
   </div>
+
+<!-- Code For Date Picker :: https://jqueryui.com/datepicker/ -->
+      <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+      <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+      <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+      <script>
+      $( function() {
+        $( "#datepicker" ).datepicker();
+      } );
+      </script>
+<!-- Code For Date Picker :: https://jqueryui.com/datepicker/ -->
+
+<!-- form input-->                    
   <div class="col-md-5">
-    <label for="inputStartdate" class="form-label">Start Date</label>
-    <input type="month" class="form-control" id="inputStartdate" placeholder="Start Date" name="inputStartdate">
+    <p>Start Date</p>
+    <label for="inputStartdate" class="form-label"></label>
+    <input type="text" id="datepicker" name="inputStartDate">
   </div>
   <div class="col-md-5">
-    <label for="inputStartdate" class="form-label">End Date</label>
-    <input type="month" class="form-control" id="inputEnddate" placeholder="End Date" name="dateDeadline">
-  </div>
+    <p>End Date</p>
+    <label for="inputEnddate" class="form-label"></label>
+   <input type="text" id="datepicker" name="dateDeadline">
+  </div>                    
   <div class="col-md-5">
     <label for="inputStartdate" class="form-label">Time Needed</label>
     <input type="number" class="form-control" id="inputtime" placeholder="Time needed" name="timeNeeded">
@@ -157,7 +189,7 @@ echo $cssFiles;
                             <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
                                 <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-cloud-download"></i></div>
                                 <h2 class="fs-4 fw-bold">Project Tasks Rewards</h2>
-                                <p class="mb-0">Sum of the Project Task Rewards <?php echo $projectSum; ?></p>
+                                <p class="mb-0">Sum of the Project Task Rewards: <?php echo $projectSum; ?></p>
                             </div>
                         </div>
 <!--                       end second card -->
@@ -167,8 +199,14 @@ echo $cssFiles;
                         <div class="card bg-light border-0 h-100">
                             <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
                                 <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-collection"></i></div>
-                                <h2 class="fs-4 fw-bold">Count Tasks</h2>
-                                <p class="mb-0">Random shit</p>
+                                <h2 class="fs-4 fw-bold">Top Three Rewards</h2>
+                                <p class="mb-0"><strong>You're on a rewards roll: </strong><br>
+                    <?php 
+                         foreach ($top3Rewards as $dokey){
+                        echo $dokey['title'].": ".$dokey['reward'].'<br>'; 
+                         }       
+                    ?>        
+                                </p>
                             </div>
                         </div>
 <!--                       end tenth card -->
