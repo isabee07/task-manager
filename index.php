@@ -321,7 +321,7 @@ echo $cssFiles;
         </section>
         <!-- Footer-->
         <footer class="py-5 bg-dark">
-            <div class="container"><p class="m-0 text-center text-white">Copyright &copy;  Texas November 1963</p></div>
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Dallas, Texas, November 22nd, 1963, N. Houston St., in a 1961 Lincoln Continental Presidential Limousine from the Sixth floor Texas School Book Depository, by Lee Harvey Oswald</p></div>
         </footer>
         <!-- Bootstrap core JS-->
    <?php echo $jsFiles;
