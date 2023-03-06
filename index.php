@@ -132,7 +132,7 @@ echo $cssFiles;
     <p>Start Date</p>
     <label for="inputStartdate" class="form-label"></label>
     <input type="text" id="datepicker" name="inputStartDate">
-  </div>
+  </div>               
   <div class="col-md-5">
     <p>End Date</p>
     <label for="inputEnddate" class="form-label"></label>
