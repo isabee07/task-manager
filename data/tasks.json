@@ -20,7 +20,7 @@
             "dateComplete": "2023-01-27",
             "title": "Build To Do Project",
             "description": "You and a partner will develop a Phase One \"To-Do\" Task Management Application focusing on functionality over form. The app will use Bootstrap, HTML\/CSS, JavaScript, PHP, and JSON. ",
-            "status": "completed",
+            "status": "created",
             "reward": 12,
             "timeNeeded": 12,
             "categories": "chores"
@@ -46,7 +46,7 @@
             "dateComplete": "2023-03-07",
             "title": "Present To Class",
             "description": "Present your todo project To Class",
-            "status": "completed",
+            "status": "created",
             "reward": 22,
             "timeNeeded": 300,
             "categories": "social"
