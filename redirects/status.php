@@ -2,12 +2,11 @@
 
 foreach($tasksData as $task){
     if ($task['uid'] == $_GET['uid']){
-      echo "yeehaw motherfucker";
+      $_SESSION['updateStat'] = $task;
+  
     } // end if
 } // end foreach bc i'm stupid
 
 
+header("Location: /tasks/status.php");
   ?>
-<br>
-hello mummy 
-( ͡° ͜ʖ ͡°)
