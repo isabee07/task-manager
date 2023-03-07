@@ -53,7 +53,7 @@
                       </tbody>
                     </table> <!-- end of table -->
 
-                          <form action="" method="post"> <!-- START of form -->
+                          <form action="/redirects/status.php" method="post"> <!-- START of form -->
                             <lable>Update The Status of a Task.</lable>
                             <br><br>
                           <select>
@@ -61,7 +61,7 @@
                              <option value="0">Completed</option>
                              <option value="0">Cancelled</option>
                           </select><br><br>
-                           <a class="btn btn-primary btn-lg" value="Submit" name="BTN-Update">Update</a>
+                           <input type="submit" class="btn btn-primary btn-lg" value="Update" name="BTN-Update"></input>
                           </form> <!-- end of form-->
 
 
