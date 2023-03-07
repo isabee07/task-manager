@@ -100,7 +100,7 @@ $uniqueTypes = array_unique($typeTask);
           <td>'.$task['title'].'</td>
           <td>'.$task['categories'].'</td>
           <td>'.$task['reward'].'</td>
-          <td><a href="/redirects/status.php?uid='.$task['uid'].'" target=_blank>'.$task['status'].'</a></td>
+          <td><a href="/redirects/status.php?uid='.$task['uid'].'">'.$task['status'].'</a></td>
         </tr>
        ';
   }

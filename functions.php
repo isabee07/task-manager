@@ -27,6 +27,19 @@ foreach ($tasksData as $task){
   }
 }
 
+if($_GET['search'] == 'Yes'){
+  $allowedTaskData = $_SESSION['searchResults'];
+} else{
+  $allowedTaskData = $mergedData;
+}
+
+
+
+$typeTask = array();
+foreach ($mergedData as $type) {
+    $typeTask[] = $type['categories'];
+}
+$uniqueTypes = array_unique($typeTask);
 
 
 
