@@ -30,17 +30,17 @@ $newFormData = array(
   "status"=>"created",
   "reward"=>$_POST['inputReward'],
   "timeNeeded"=>$_POST['timeNeeded'],
-  "categories"=>$POST['inputtype']
+  "categories"=>$_POST['inputtype']
   
 ); 
   
-$jsonTasks = file_get_contents($taskDataFile);
-$tasksData = json_decode($jsonTasks, TRUE);
+
 array_push($newFormData, $tasksData);
 $jsonData = json_encode($newFormData, JSON_PRETTY_PRINT);
-file_put_contents($_SERVER['DOCUMENT_ROOT'].'/data/tasks.json', $jsonData);
+file_put_contents($taskDataFile, $jsonData);
 
-header("Location: /index.php");
+
   
 }
+  header("Location: /index.php");
 ?>
