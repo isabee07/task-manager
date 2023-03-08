@@ -56,10 +56,10 @@
                           <form action="/redirects/status.php" method="post"> <!-- START of form -->
                             <lable>Update The Status of a Task.</lable>
                             <br><br>
-                          <select>
+                          <select name="statusUpdate">
                             <option value="0">Choose Status</option>
-                             <option value="0">Completed</option>
-                             <option value="0">Cancelled</option>
+                             <option value="completed">Completed</option>
+                             <option value="canceled">Canceled</option>
                           </select><br><br>
                            <input type="submit" class="btn btn-primary btn-lg" value="Update" name="BTN-Update"></input>
                           </form> <!-- end of form-->
