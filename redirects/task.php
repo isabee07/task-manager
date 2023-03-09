@@ -20,17 +20,14 @@ foreach ($usersData as $user) {
 
 $newFormData = array(
   "uid"=>$newUID,
-  "userUID"=>$newUserUID,
-  "user"=>$_POST['inputUser'],
   "dateCreate"=>$_POST['inputStartdate'],
   "dateDeadline"=>$_POST['dateDeadline'],
-  "dateComplete"=>null,
-  "title"=>$_POST['inputTitle'],
+  "title"=>$_POST['title'],
   "description"=>$_POST['description'],
   "status"=>"created",
-  "reward"=>$_POST['inputReward'],
-  "timeNeeded"=>$_POST['timeNeeded'],
-  "categories"=>$_POST['inputtype']
+  "reward"=>$_POST['reward'],
+  "timeNeeded"=>$_POST['time'],
+  "categories"=>$_POST['category']
   
 ); 
   

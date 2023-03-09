@@ -101,65 +101,45 @@ echo $cssFiles;
                 <div class="p-4 p-lg-5 bg-light rounded-3 ">
                     <div class="m-4 m-lg-5">
                         <h1 class="display-5 fw-bold">Input Task</h1>
-                       <form class="row g-3" action="/redirects/task.php" method="post">
+                       <form class="row g-3 fs-4" action="/redirects/task.php" method="post">
   <div class="col-md-6">
-    <label for="inputUser" class="form-label">User</label>
-    <input type="text" class="form-control" id="inputUser" placeholder="User" name="inputUser">
+    <label for="title" class="form-label">Task Title</label>
+    <input type="text" class="form-control" name="title">
   </div>
   <div class="col-md-6">
-    <label for="inputTitle" class="form-label">Title</label>
-    <input type="text" class="form-control" id="inputTitle" placeholder="Title" name="inputTitle">
-  </div>
-  <div class="col-12">
-    <label for="description" class="form-label">Description</label>
-    <input type="text" class="form-control" id="description" placeholder="Description" name="description">
-  </div>
-
-<!-- Code For Date Picker :: https://jqueryui.com/datepicker/ -->
-      <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
-      <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-      <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-
-      <script>
-      $( function() {
-        $( "#datepicker" ).datepicker();
-      } );
-      </script>
-<!-- Code For Date Picker :: https://jqueryui.com/datepicker/ -->
-
-<!-- form input-->                    
-  <div class="col-md-5">
-    <p>Start Date</p>
-    <label for="inputStartdate" class="form-label"></label>
-    <input type="text" id="datepicker" name="inputStartDate">
-  </div>               
-  <div class="col-md-5">
-    <p>End Date</p>
-    <label for="inputEnddate" class="form-label"></label>
-   <input type="text" id="datepicker" name="dateDeadline">
-  </div>                    
-  <div class="col-md-5">
-    <label for="inputStartdate" class="form-label">Time Needed</label>
-    <input type="number" class="form-control" id="inputtime" placeholder="Time needed" name="timeNeeded">
-  </div>
-  <div class="col-md-5">
-    <label for="inputtype" class="form-label">Type of task</label>
-    <select id="inputtype" class="form-select" name="inputtype">
-      <option selected>Types of Tasks</option>
-      <option>Chore</option>
+    <label for="inputState" class="form-label">Task Category</label>
+    <select id="inputState" class="form-select" name="category">
+      <option selected>Choose One</option>
       <option>Homework</option>
-      <option>Event</option>
+      <option>Chores</option>
       <option>Project</option>
-       <option>Trip</option>
-       <option>Appointment</option>
+      <option>Social</option>
     </select>
   </div>
-    <div class="col-md-2">
-    <label for="inputReward" class="form-label">Reward</label>
-    <input type="number" class="form-control" id="inputReward" name="inputReward" placeholder="Reward">
-  </div>
   <div class="col-12">
-    <button type="submit" class="btn btn-primary" name="BTN_create">Submit</button>
+    <label for="description" class="form-label">Task Description</label>
+    <textarea class="form-control" aria-label="With textarea" name="description"></textarea>
+  </div>
+<div class="col-12">
+    <label for="dateStart" class="form-label">Task Start</label>
+    <input type="date"class="form-control" name="dateStart"></input>
+  </div>
+<div class="col-12">
+    <label for="dateEnd" class="form-label">Task End</label>
+    <input type="date" class="form-control" name="dateEnd"></input>
+  </div>                        
+  <div class="col-md-6">
+    <label for="value" class="form-label">Task Value</label>
+    <!-- Number input to accept decimal -  https://stackoverflow.com/questions/34057595/allow-2-decimal-places-in-input-type-number -->
+    <input type="number" class="form-control" name="reward" step=".01">
+  </div>
+  <div class="col-md-6">
+    <label for="time" class="form-label">Minutes Needed To Complete</label>
+    <input type="number" class="form-control" name="time">
+  </div>
+  
+  <div class="col-12">
+    <input type="submit" class="btn btn-primary btn-lg" value="Create">
   </div>
 </form>
                         

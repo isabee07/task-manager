@@ -59,7 +59,7 @@
                           <select name="statusUpdate">
                             <option value="0">Choose Status</option>
                              <option value="completed">Completed</option>
-                             <option value="canceled">Canceled</option>
+                             <option value="cancelled">Canceled</option>
                           </select><br><br>
                            <input type="submit" class="btn btn-primary btn-lg" value="Update" name="BTN-Update"></input>
                           </form> <!-- end of form-->
